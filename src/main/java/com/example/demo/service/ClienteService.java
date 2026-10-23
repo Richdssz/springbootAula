@@ -19,7 +19,6 @@ public class ClienteService {
     public ClienteModel createCliente(ClienteModel cliente) throws Exception{
         if(cliente.getUsername().isBlank() || cliente.getPassword().isEmpty())
             throw new Exception("Nome ou senha invalidos");
-        clienteRepository.
         return clienteRepository.save(cliente);
     }
 
