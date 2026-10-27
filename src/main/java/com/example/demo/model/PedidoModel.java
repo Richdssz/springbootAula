@@ -22,7 +22,7 @@ public class PedidoModel {
     private LocalDateTime dataPedido = LocalDateTime.now();
     private String status;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "cliente_id", nullable = false)
     private ClienteModel cliente;
 
