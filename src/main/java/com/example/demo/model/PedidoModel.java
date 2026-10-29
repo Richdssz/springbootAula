@@ -27,11 +27,7 @@ public class PedidoModel {
     private ClienteModel cliente;
 
     @ManyToMany
-    @JoinTable(
-        name = "pedido_produtos",
-        joinColumns = @JoinColumn(name = "pedido_id"),
-        inverseJoinColumns = @JoinColumn(name = "produto_id")
-    )
+    @JoinTable(name = "pedido_produtos", joinColumns = @JoinColumn(name = "pedido_id"), inverseJoinColumns = @JoinColumn(name = "produto_id"))
     private List<ProdutoModel> produtos = new ArrayList<>();
 
     @OneToOne(mappedBy = "pedido")
